@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:48:58 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 10:28:27 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:00:21 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ void		stack_rrotations(t_ps *ps, t_op code);
 void		op(t_ps *ps, t_op code);
 // parsing
 int			parse_flags(int ac, char **av, t_ps *ps);
-int			parse_string(int ac, char **av, t_ps *ps);
 int			ft_atoi(const char *s, int *out);
 int			parse_args(int ac, char **av, t_ps *ps);
 char		**normalize_args(int ac, char **av, int *new_ac);

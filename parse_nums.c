@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 15:38:27 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/17 09:57:03 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:03:59 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ static int	check_sup(t_stack *s)
 	int	j;
 
 	i = 0;
-	while (i < s->size)
+	while (i < (int)s->size)
 	{
 		j = i + 1;
-		while (j < s->size)
+		while (j < (int)s->size)
 		{
 			if (stack_get(s, i) == stack_get(s, j))
 				return (-1);

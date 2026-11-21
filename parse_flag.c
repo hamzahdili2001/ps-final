@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:58:57 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/20 18:16:15 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 11:59:53 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,32 +51,4 @@ int	parse_flags(int ac, char **av, t_ps *ps)
 	if (ps->mode == MODE_NONE && ps->adaptive == 0)
 		ps->adaptive = 1;
 	return (i);
-}
-
-static int	ft_isstring(char *s)
-{
-	int	check;
-
-	check = -1;
-	while (*s)
-	{
-		if (ft_isspace(*s))
-			check = 1;
-		s++;
-	}
-	return (check);
-}
-
-int	parse_string(int ac, char **av, t_ps *ps)
-{
-	int	i;
-
-	i = 1;
-	while (i < ac)
-	{
-		if (ft_isstring(av[i]))
-			return (i);
-		i++;
-	}
-	return (-1);
 }
