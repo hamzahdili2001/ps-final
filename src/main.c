@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:40:43 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 10:25:06 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:19:43 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ int	main(int ac, char **av)
 		return (-1);
 	new_av = normalize_args(ac, av, &new_ac);
 	if (!new_av)
+	{
+		ft_putendl_fd("Error", 2);
 		return (free_ps(ps), -1);
+	}
 	if (parse_args(new_ac, new_av, ps) < 0)
 		return (cleanup_error(ps, new_av));
 	free_normalized_args(new_av);

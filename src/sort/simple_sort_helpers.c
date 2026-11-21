@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 10:27:46 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 10:27:46 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:24:17 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -17,7 +17,7 @@ void	sort_2(t_ps *ps)
 	int	b;
 
 	a = stack_get(&ps->a, 0);
-	b = stack_get(&ps->b, 1);
+	b = stack_get(&ps->a, 1);
 	if (b < a)
 		op(ps, OP_RA);
 }

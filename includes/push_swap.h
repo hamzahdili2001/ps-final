@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:48:58 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 12:00:21 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:53:49 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-// DEBUGGING
-# include <stdio.h>
-// ENDDEBUGGNIG
 typedef enum e_op
 {
 	OP_SA,

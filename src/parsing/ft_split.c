@@ -6,13 +6,13 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 14:30:08 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/16 14:12:52 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:53:22 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	token_len(char *str)
+static size_t	token_len(char *str)
 {
 	size_t	tlen;
 

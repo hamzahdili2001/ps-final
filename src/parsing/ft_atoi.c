@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 14:19:16 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/16 13:23:24 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:11:16 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,12 @@ int	ft_atoi(const char *s, int *out)
 	if (!ft_isdigit(*s))
 		return (-1);
 	while (ft_isdigit(*s))
+	{
 		result = result * 10 + (*s++ - '0');
+		if (overflow(result, sign) < 0)
+			return (-1);
+	}
 	if (*s != '\0')
-		return (-1);
-	if (overflow(result, sign) < 0)
 		return (-1);
 	*out = (int)(result * sign);
 	return (0);

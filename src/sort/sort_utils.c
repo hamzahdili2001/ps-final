@@ -6,12 +6,12 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:45:14 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 12:04:18 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:53:03 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	rank(t_stack *s, int *ranks)
+static void	rank(t_stack *s, int *ranks)
 {
 	int	i;
 
