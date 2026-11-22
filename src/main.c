@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:40:43 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/21 12:19:43 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/22 09:16:25 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,20 @@ static int	cleanup_error(t_ps *ps, char **new_av)
 	ft_putendl_fd("Error", 2);
 	return (-1);
 }
-
+int	check_flag(char *s)
+{
+	if (ft_strcmp(s, "--bench") == 0)
+		return (0);
+	if (ft_strcmp(s, "--adaptive") == 0)
+		return (0);
+	if (ft_strcmp(s, "--simple") == 0)
+		return (0);
+	else if (ft_strcmp(s, "--medium") == 0)
+		return (0);
+	else if (ft_strcmp(s, "--complex") == 0)
+		return (0);
+	return (-1);
+}
 int	main(int ac, char **av)
 {
 	t_ps	*ps;
@@ -53,7 +66,14 @@ int	main(int ac, char **av)
 	if (ac <= 1)
 		return (0);
 	if (ac == 2 && ft_isflag(av[1]))
+	{
+		if (check_flag(av[1]) < 0)
+		{
+			ft_putendl_fd("Error", 2);
+			return (-1);
+		}
 		return (0);
+	}
 	ps = init_push_swap();
 	if (!ps)
 		return (-1);
