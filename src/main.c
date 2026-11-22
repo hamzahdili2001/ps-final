@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 09:40:43 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/22 09:16:25 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/22 09:26:20 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	run_push_swap(t_ps *ps)
 		return (0);
 	}
 	if (sort_dispatch(ps) < 0)
-		return (0);
+		return (-1);
 	return (0);
 }
 
@@ -86,6 +86,7 @@ int	main(int ac, char **av)
 	if (parse_args(new_ac, new_av, ps) < 0)
 		return (cleanup_error(ps, new_av));
 	free_normalized_args(new_av);
-	run_push_swap(ps);
+	if (run_push_swap(ps) < 0)
+		return (free_ps(ps), -1);
 	return (free_ps(ps), 0);
 }
